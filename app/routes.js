@@ -14,3 +14,8 @@ router.post('/new/email-address', (req, res) => {
 router.post('/new/code', (req, res) => {
     res.redirect('/new/name')
 })
+
+
+router.post('/new/name', (req, res) => {
+    res.redirect('/new/country')
+})

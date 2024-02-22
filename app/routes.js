@@ -38,3 +38,8 @@ if(req.body.new.numberOfBalls == 'None - I cannot juggle') {
 router.post('/new/juggling-trick', (req, res) => {
     res.redirect('/new/juggling-objects')
 })
+
+
+router.post('/new/juggling-objects', (req, res) => {
+    res.redirect('/new/check')
+})

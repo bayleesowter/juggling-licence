@@ -7,7 +7,11 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 router.post('/new/email-address', (req, res) => {
+    if(req.query.returnUrl) {
+        res.redirect(req.query.returnUrl)
+    } else {
     res.redirect('/new/code')
+    }
 })
 
 
@@ -17,12 +21,20 @@ router.post('/new/code', (req, res) => {
 
 
 router.post('/new/name', (req, res) => {
+if(req.query.returnUrl) {
+    res.redirect(req.query.returnUrl)
+} else {
     res.redirect('/new/country')
+}
 })
 
 
 router.post('/new/country', (req, res) => {
+    if(req.query.returnUrl) {
+        res.redirect(req.query.returnUrl)
+    } else {
     res.redirect('/new/juggling-balls')
+    }
 })
 
 
@@ -36,10 +48,18 @@ if(req.body.new.numberOfBalls == 'None - I cannot juggle') {
 
 
 router.post('/new/juggling-trick', (req, res) => {
+    if(req.query.returnUrl) {
+        res.redirect(req.query.returnUrl)
+    } else {
     res.redirect('/new/juggling-objects')
+    }
 })
 
 
 router.post('/new/juggling-objects', (req, res) => {
+    if(req.query.returnUrl) {
+        res.redirect(req.query.returnUrl)
+    } else {
     res.redirect('/new/check')
+    }
 })

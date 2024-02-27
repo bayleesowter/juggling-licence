@@ -2,33 +2,35 @@
 
 {% set pageName = "Accessibility statement" %}
 
+{% set accessibilityContent %}
+# {{pageName}}    
+    
+laskjflks jdfoi sdjfosdij fosdifjo    
+    
+##   alsdkjfoasdijfasidufn
+    
+- bullet 1
+- bullet 2    
+- bullet 3        
+    
+### Level 3 heading    
+    
+1. Item 1    
+2. Item 2    
+3. Item 3    
+    
+sfljsdofijsdfoij [sldkfjsdlij](/).    
+    
+{% endset %} 
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-   
-
-    <h1 class="govuk-heading-l"> {{ pageName }}</h1>
-   <p> The GOV.UK Design System team follows 3 sets of principles to increase the accessibility of government services.</p>
-
-   <h2 class="govuk-heading-m">Web accessibility</h2>
-<p>We follow the 4 principles of web accessibility upon which WCAG is based:
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>
-    Perceivable: Information and user interface components must be presentable to users in ways they can perceive.
-  </li>
-  <li>
-    Operable: User interface components and navigation must be operable.
-  </li>
-  <li>
-    Understandable: Information and the operation of the user interface must be understandable.
-  </li>
-  <li>
-    Robust: Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.
-</ul>
-</p>
+         
+    
+{{accessibilityContent | govukMarkdown({ headingsStartWith: 'l' }) }}
+    
   </div>
 </div>
 
